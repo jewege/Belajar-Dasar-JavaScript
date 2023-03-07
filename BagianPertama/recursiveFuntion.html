@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Recursive Function</title>
+</head>
+
+<body>
+      <script>
+            function faktorial(value) {
+                  if (value === 0 || value === 1)
+                        return 1;
+                  for (let i = value - 1; i >= 1; i--) {
+                        value *= i;
+                  }//factorial dengan perulangan for
+                  return value;
+            }
+            console.log(faktorial(7));
+
+            function faktorial(value) {
+                  let result = 1;
+                  for (let i = 1; i <= value; i++) {
+                        result *= i;
+                  }//factorial dengan perulangan for
+                  return result;
+            }
+
+            console.log(faktorial(7));
+
+            //faktorial menggunakan function recursive
+
+            function factorialRecursive(value) {
+                  if (value === 1) {
+                        return 1;
+                  } else {
+                        return value * factorialRecursive(value - 1)
+                  }
+            }
+            console.info(factorialRecursive(7));
+            //7 * factorialRecursive(6)
+            //7 * 6 * factorialRecursive(5)
+            //7 * 6 * 5 * factorialRecursive(4)
+            //7 * 6 * 5 * 4 *factorialRecursive(3)
+            //7 * 6 * 5 * 4 * 3 * factorialRecursive(2)
+            //7 * 6 * 5 * 4 * 3 * 2 * factorialRecursive(1)
+            //7 * 6 * 5 * 4 * 3 * 2 * 1  
+      </script>
+</body>
+
+</html>

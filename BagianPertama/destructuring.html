@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Destructuring</title>
+</head>
+
+<body>
+      <script>
+            // const names = ["Jon", "Warnek", "Gultom"];
+            // const firstName = names[0];
+            // const middleName = names[1];
+            // const lastName = names[2];
+
+            // console.info(firstName);
+            // console.info(middleName);
+            // console.info(lastName);//cara manual
+            {
+                  const names = ["Jon", "Warnek", "Gultom", "Mahasiswa", "21 Tahun"];
+                  const [firstName, middleName, lastName, ...others] = names;
+
+                  console.info(firstName);
+                  console.info(middleName);
+                  console.info(lastName);
+                  console.info(others);
+            }
+            {
+                  const person = {
+                        firstName: "Jon",
+                        lastName: "Gultom",
+                        address: {
+                              street: "Jln Pelita1",
+                              city: "Medan",
+                              country: "Indonesia",
+                        },
+                        hobby: "Modom",
+                        channel: "Tidak Ada"
+                  }
+                  let { firstName, lastName, address: { street, city, country }, ...others } = person;
+                  console.info(firstName);
+                  console.info(lastName);
+                  console.info(street);
+                  console.info(city);
+                  console.info(country);
+                  console.info(others);
+            }
+
+            {
+                  function displayPerson({ firstName, lastName, address }) {
+                        console.info(firstName);
+                        console.info(lastName);
+                        console.info(address);
+                  }
+
+                  const person = {
+                        firstName: "Jon",
+                        lastName: "Gultom",
+                        address: "Medan"
+                  }
+                  displayPerson(person);
+            }
+
+            {
+                  function sum([first, second]) {
+                        return first + second;
+                  }
+                  console.info(sum([5, 5]));
+                  console.info(sum([2, 2]));
+            }
+
+
+            {//default value
+                  const names = ["Jewe", , "Batunadua"];//=>Default valuenya
+                  const [firstName, lastName = "Gultom", address] = names;
+
+                  console.info(firstName);
+                  console.info(lastName);
+                  console.info(address);
+            };
+
+
+      </script>
+
+</body>
+
+</html>

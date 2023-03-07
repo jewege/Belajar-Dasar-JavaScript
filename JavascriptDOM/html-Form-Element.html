@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>html Form Element</title>
+</head>
+
+<body>
+      <form name="commentForm">
+            <div>
+                  <label for=" comment">Comment</label>
+                  <br />
+                  <input type="text" name="comment" id="comment">
+            </div>
+            <br />
+            <div>
+                  <label for="from">From</label>
+                  <br />
+
+                  <input type="text" name="from" id="from">
+            </div>
+            <br />
+            <input type="submit" value="Submit">
+      </form>
+      <div id="commentList">
+
+      </div>
+      <br />
+      <br />
+      <br />
+      <form name="commentForm1">
+            <div>
+                  <label for=" comment1">Comment</label>
+                  <br />
+                  <input type="text" name="comment" id="comment1">
+            </div>
+            <br />
+            <div>
+                  <label for="from1">From</label>
+                  <br />
+
+                  <input type="text" name="from" id="from1">
+            </div>
+            <br />
+            <input type="submit" value="Submit">
+      </form>
+
+      <div id="commentList1">
+
+      </div>
+
+      <script>
+            document.querySelector("form[name=commentForm]").onsubmit = function (event) {
+                  event.preventDefault();
+
+                  const commentList = document.getElementById("commentList");
+                  const comment = document.getElementById("comment").value;
+                  const from = document.getElementById("from").value;
+
+                  const commentItem = document.createElement("p");
+                  commentItem.textContent = `${comment} ~ ${from}`;
+                  commentList.appendChild(commentItem);
+
+                  document.querySelector("form[name=commentForm]").reset();
+            }
+
+      </script>
+
+      <script>
+            document.forms['commentForm1'].onsubmit = function (event) {
+                  event.preventDefault();
+
+                  const commentList = document.getElementById("commentList1");
+                  const comment1 = document.forms['commentForm1']['comment1'].value;
+                  const from1 = document.forms['commentForm1']['from1'].value;
+
+                  const commentItem1 = document.createElement("p");
+                  commentItem1.textContent = `${comment1} ~ ${from1}`;
+                  commentList1.appendChild(commentItem1);
+
+                  document.forms['commentForm1'].reset();
+            }
+
+            //kita bisa mengakses form hanya dengan menggunakan nama form
+      </script>
+</body>
+
+</html>

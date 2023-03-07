@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dengan Module</title>
+</head>
+
+<body>
+      <script type="module">
+            //import digunakan untuk mengambil code dari module yang sudah di export atau di ekspos
+            import { sayHello, sayGoodbye } from "./script/export.js";
+            import { nama } from "./script/variable.js";//menginport variable dengan type module
+
+            sayHello("Jon");
+            sayHello("Warnek");
+            sayGoodbye("Gultom");
+            console.info(nama);
+      </script>
+</body>
+
+</html>

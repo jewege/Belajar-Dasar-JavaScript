@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tipe data Objek</title>
+</head>
+
+<body>
+      <script>
+            const person = {};
+
+            person["nama"] = "Jon W";
+            person["umur"] = 18;
+            person["tingkat"] = 4;
+
+            console.table(person);
+
+            const objek = {
+                  "nama lengkap": "Jon W",
+                  umur: 18,
+                  tingkat: 4,
+            };
+            console.table(objek);
+
+            console.info(`Nama = ${objek["nama lengkap"]}`);
+            console.info(`Umur = ${objek.umur}`);
+            console.info(`Tingkat = ${objek.tingkat}`);
+
+            console.table(objek);
+      </script>
+</body>
+
+</html>

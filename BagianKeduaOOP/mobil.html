@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Nyalain moobil</title>
+</head>
+
+<body>
+      <script>
+            class Car {
+
+                  constructor(type, color) {
+                        this.type = type
+                        this.color = color
+                        this.engineStatus = 'off'
+                  }
+
+                  engineStart() {
+
+                        this.engineStatus = 'on'
+                        console.log('engine start')
+                  }
+
+                  engingeStop() {
+                        this.engineStatus = 'off'
+                        console.log('engine start')
+                  }
+
+                  static isEngineOn(car) {
+                        if (car.engineStatus === 'on') {
+                              console.log('Engine On')
+                        } else {
+                              console.log('Engine off')
+                        }
+                  }
+
+            }
+      </script>
+</body>
+
+</html>

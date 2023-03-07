@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Funtion Return Value</title>
+</head>
+
+<body>
+      <script>
+            function sayHello(firstName, lastName) {
+                  const say = `Hello ${firstName} ${lastName}`;
+                  return say;
+            }
+            const result = sayHello("Jon", "Gultom");
+            document.writeln(result);
+            document.writeln("<br/>")
+            document.writeln("<br/>")
+
+
+            function getFinalValue(value) {
+                  if (value > 90) {
+                        return "A";
+                  } else if (value) {
+                        return "B";
+                  } else if (value) {
+                        return "C";
+                  } else if (value) {
+                        return "D";
+                  }
+                  else {
+                        return "E"
+                  }
+            }
+            const finalValue = getFinalValue(95);
+            document.writeln(`Nilai anda =  ${finalValue}`);
+
+
+
+            function isContains(array, searchValue) {
+                  for (const element of array) {
+                        if (element == searchValue) {
+                              return true;
+                        }
+                  }
+                  return false;
+            }
+
+            const array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            const search = 11;
+            const found = isContains(array, search);
+            document.writeln(`<p> Apakah dalam data ini [${array}] terdapat angka ${43}?</p>`);
+            if (found == true) {
+                  document.writeln('Benar');
+            }
+            else {
+                  document.writeln('Tidak terdapat dalam data');
+            }
+      </script>
+</body>
+
+</html>

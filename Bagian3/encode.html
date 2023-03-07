@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Encode</title>
+</head>
+
+<body>
+      <script>
+            {
+
+                  //encode uri dan decode uri
+
+                  const url = "http://contoh.com/?name=jon Warnek gultom";
+                  console.info(url);
+
+                  const encode = encodeURI(url);
+                  console.info(encode);
+            }
+
+            {
+                  const value = "Jon?Warnek=gultom";
+                  const url = "http://contoh.com/?name=";
+                  console.info(url + value);
+
+                  const decoded = decodeURIComponent(value);
+                  console.info(url + decoded);
+            }
+      </script>
+</body>
+
+</html>

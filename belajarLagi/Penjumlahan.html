@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <link rel="stylesheet" href="penjumlahan.css" /> -->
+  <title>Penjumlahan</title>
+</head>
+
+<body>
+  <div class="content">
+    <form>
+      <div class="input text" style="margin: 10px">
+        <label for="Angka1">Masukkan Angka 1</label>
+        <input id="angka1" type="number" />
+      </div>
+      <div class="input text">
+        <label for="Angka2">Masukkan Angka 2</label>
+        <input id="angka2" type="number" />
+      </div>
+      <div class="input submit">
+        <button onclick="cetak()">cetak</button>
+      </div>
+    </form>
+    <div id="hasil"></div>
+  </div>
+
+  <script>
+    function cetak() {
+      const angka1 = document.getElementById('angka1').value
+      const angka2 = document.getElementById('angka2').value
+
+      const hasil = parseInt(angka1) + parseInt(angka2)
+      console.log(hasil)
+
+      document.getElementById("hasil").innerHTML = `${angka1} + ${angka2} = ${hasil}`
+      event.preventDefault()
+    }
+  </script>
+</body>
+
+</html>
